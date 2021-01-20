@@ -1,0 +1,1 @@
+solana catchup ~/validator-keypair.json http://127.0.0.1:10899/
