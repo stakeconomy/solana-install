@@ -31,10 +31,10 @@ sudo apt-get --assume-yes install \
   zstd
 
 # Create sol user
-#sudo adduser sol --gecos "" --disabled-password --quiet
-#sudo adduser sol sudo
-#sudo adduser sol adm
-#sudo -- bash -c 'echo "sol ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers'
+sudo adduser sol --gecos "" --disabled-password --quiet
+sudo adduser sol sudo
+sudo adduser sol adm
+sudo -- bash -c 'echo "sol ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers'
 
 # Install solana release as the sol user
 sudo --login -u sol -- bash -c "
@@ -45,7 +45,7 @@ sudo --login -u sol -- bash -c "
   cp /etc/hostname ~/.hostname;
   mkdir ~/.ssh;
   chmod 0700 ~/.ssh;
-echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC9WOZMN0zQieAQDKmfl7jVjPhU8X+5vBVwdFRRav8Gm mbroeken-key' >> ~/.ssh/authorized_keys;
+echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMM6f3drqz3lIjuxyEnz4dhxpiBLcFJFZhjsLcmfD5Ue' >> ~/.ssh/authorized_keys;
 "
 
 # Put `syslog` user in the `tty` group
